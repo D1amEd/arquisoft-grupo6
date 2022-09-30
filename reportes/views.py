@@ -19,7 +19,7 @@ def reportes_view(request):
             reportes = serializers.serialize('json', reportes_dto)
             return HttpResponse(reportes, 'application/json')
     if request.method == 'POST':
-        reporte_dto = rl.create_report(json.loads(request.body))
+        reporte_dto = rl.create_reporte(json.loads(request.body))
         reporte = serializers.serialize('json', [reporte_dto,])
         return HttpResponse(reporte, 'application/json')
 
