@@ -3,7 +3,7 @@ from reportes.models import Reporte
 
 # Create your models here.
 class Estadistica(models.Model):
-    reporte = models.ForeignKey(Reporte, on_delete=models.CASCADE, default=None)
+    reporte = models.CharField(max_length=100)
     name = models.CharField(max_length=25)
     description = models.CharField(max_length=100)
     value = models.FloatField(null=True, blank=True, default=None)
